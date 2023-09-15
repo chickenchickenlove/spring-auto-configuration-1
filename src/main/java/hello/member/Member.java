@@ -11,5 +11,6 @@ import lombok.RequiredArgsConstructor;
 public class Member {
     private String memberId;
     private String name;
+    //
 
 }
