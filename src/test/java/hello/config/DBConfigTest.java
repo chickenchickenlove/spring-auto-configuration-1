@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.TransactionManager;
@@ -33,6 +34,7 @@ class DBConfigTest {
         log.info("TransactionManager = {}", transactionManager);
         log.info("JdbcTemplate = {}", jdbcTemplate);
 
+        JdbcTemplateAutoConfiguration
         assertThat(dataSource).isNotNull();
         assertThat(transactionManager).isNotNull();
         assertThat(jdbcTemplate).isNotNull();
